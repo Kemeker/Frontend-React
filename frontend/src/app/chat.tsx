@@ -7,7 +7,7 @@ function ChatPage() {
   const [newMessage, setNewMessage] = useState('');
 
   useEffect(() => {
-    const messagesRef = firebase.database().ref('messages');
+    const messagesRef = firebase.database().ref('messages')
 
     const handleData = (snapshot) => {
       const data = snapshot.val();
