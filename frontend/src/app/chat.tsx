@@ -1,5 +1,4 @@
-// pages/chat.tsx
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import firebase from '../../firebase/firebase';
 
 function ChatPage() {
@@ -7,7 +6,7 @@ function ChatPage() {
   const [newMessage, setNewMessage] = useState('');
 
   useEffect(() => {
-    const messagesRef = firebase.database().ref('messages')
+    const messagesRef = firebase.database().ref('messages');
 
     const handleData = (snapshot) => {
       const data = snapshot.val();
@@ -45,14 +44,18 @@ function ChatPage() {
           <div key={message.timestamp}>{message.text}</div>
         ))}
       </div>
-      <input
-        type="text"
-        value={newMessage}
-        onChange={(e) => setNewMessage(e.target.value)}
-      />
-      <button onClick={handleSendMessage}>Enviar</button>
+      <div>
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+        />
+        <button onClick={handleSendMessage}>Enviar</button>
+      </div>
     </div>
   );
 }
 
 export default ChatPage;
+
+

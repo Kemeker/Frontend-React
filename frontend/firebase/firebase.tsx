@@ -1,7 +1,6 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/database'
-
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDu6KoqIpJDSrFM_V70srV209h_wqBJlKE",
@@ -13,7 +12,7 @@ const firebaseConfig = {
   measurementId: "G-T3P0KXVP7G"
 };
 
-// Verifica se o Firebase já foi inicializado
+// Inicializa o Firebase se ainda não estiver inicializado
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
